@@ -20,7 +20,7 @@ Than create the smart account (address sender) and run the first user operation 
 
 Then test the execution of the user operation by executing (count should be 1):
 
-`npx hardhat run scripts/testSmartAccount.js`
+`npx hardhat run scripts/testSmartAccount.js` remember to update the `ACCOUNT_ADDRESS` with the output of the previous run in `Sender address`.
 
 Then to run subsequent user operations run:
 
@@ -28,7 +28,7 @@ Then to run subsequent user operations run:
 
 Finally if you want to test the the user operation run again: 
 
-`npx hardhat run scripts/runUserOp.js`
+`npx hardhat run scripts/testSmartAccount.js`
 
 The count should increasing and should be equal to the number of user operations you have executed.
 
