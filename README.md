@@ -1,5 +1,10 @@
 # Execute a User Operation
-In this branch we execute a basic user operation. We firstly deploy the EntryPoint and the Account Factory with:
+In this branch we execute a basic user operation. We firstly 
+First start the local Hardhat blockchain with:
+
+`npx hardhat node`
+
+Then we deploy the EntryPoint and the Account Factory with:
 
 `npx hardhat ignition deploy ignition/modules/Module.js`
 
