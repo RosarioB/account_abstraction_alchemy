@@ -1,5 +1,5 @@
-# Execute a User Operation
-In this branch we execute a basic user operation. We firstly 
+# Build a paymaster
+In this branch we add the paymaster that will pay the user operation. We firstly 
 First start the local Hardhat blockchain with:
 
 `npx hardhat node`
@@ -8,11 +8,7 @@ Then we deploy the EntryPoint and the Account Factory with:
 
 `npx hardhat ignition deploy ignition/modules/Module.js`
 
-Then we test tha the deployment of the Entry Point was successful by executing 
-
-`npx hardhat run scripts/testEP.js`
-
-Remember to update the variables `ENTRY_POINT_ADDRESS` and `0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512` with the values returned by the ignition module.
+Remember to update the variables `ENTRY_POINT_ADDRESS`, `FACTORY_ADDRESS` and `PAYMASTER_ADDRESS` with the values returned by the ignition module.
 
 Than create the smart account (address sender) and run the first user operation by executing:
 
@@ -28,9 +24,9 @@ Then to run subsequent user operations run:
 
 Finally if you want to test the the user operation run again: 
 
-`npx hardhat run scripts/testSmartAccount.js`
+`npx hardhat run scripts/test.js`
 
-The count should increasing and should be equal to the number of user operations you have executed.
+The count should increase and be equal to the number of user operations you have executed. Additionally, the balance of the smart account should be zero, as well as the balance of the smart account on the entry point. Only the balance of the paymaster on the entry point should be approximately 0.5 Ether, and it should decrease with each run since the paymaster is covering the cost of the user operations.
 
 
 # Sample Hardhat Project
