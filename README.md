@@ -1,5 +1,5 @@
 # Execute a User Operation
-In this branch we execute a basic user operation. We firstly 
+In this branch we execute a basic user operation where it is the Smart Account that it is sponsoring the cost of the user operation. We firstly 
 First start the local Hardhat blockchain with:
 
 `npx hardhat node`
@@ -20,7 +20,7 @@ Than create the smart account (address sender) and run the first user operation 
 
 Then test the execution of the user operation by executing (count should be 1):
 
-`npx hardhat run scripts/testSmartAccount.js` remember to update the `ACCOUNT_ADDRESS` with the output of the previous run in `Sender address`.
+`npx hardhat run scripts/testSmartAccount.js` remember to update the `ACCOUNT_ADDRESS` (i.e. the smart account) with the output of the previous run in `Sender address`.
 
 Then to run subsequent user operations run:
 
