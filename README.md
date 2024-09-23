@@ -1,5 +1,10 @@
 # Execute a User Operation
-In this branch we execute a basic user operation where it is the Smart Account that it is sponsoring the cost of the user operation. We firstly 
+The code is taken from the video https://www.youtube.com/watch?v=NM04uxcCOEw&list=PLMj8NvODurfF5xy8CO59TNNeC-RTtCCf8&index=1
+
+In this branch we execute a basic user operation where it is the Smart Account that it is sponsoring the cost of the user operation. 
+
+## Execution
+We firstly 
 First start the local Hardhat blockchain with:
 
 `npx hardhat node`
