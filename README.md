@@ -1,6 +1,6 @@
 # Account validation
-- [Link to the video](https://www.youtube.com/watch?v=2LGpEobxIBA&list=PLMj8NvODurfF5xy8CO59TNNeC-RTtCCf8&index=2)
-- [Link to the documentation](https://docs.alchemy.com/docs/1-execute-a-user-operation)
+- [Link to the video](https://www.youtube.com/watch?v=vj2gklqLRSA&list=PLMj8NvODurfF5xy8CO59TNNeC-RTtCCf8&index=3)
+- [Link to the documentation](https://docs.alchemy.com/docs/3-account-validation)
 
 In this branch validate the user operation signature.
 
