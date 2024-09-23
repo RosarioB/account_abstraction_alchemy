@@ -18,19 +18,11 @@ async function main() {
 
   console.log("Sender address " + sender);
 
-  const AccountFactory = await hre.ethers.getContractFactory("AccountFactory");
-  const [signer0] = await hre.ethers.getSigners();
+  const [signer0, signer1] = await hre.ethers.getSigners();
+  console.log("signer0 address", await signer0.getAddress());
+  console.log("signer1 address", await signer1.getAddress());
   const address0 = await signer0.getAddress();
-  const initCode =
-    FACTORY_ADDRESS +
-    AccountFactory.interface
-      .encodeFunctionData("createAccount", [address0])
-      .slice(2);
-
-  // Pre-found Entry Point on behalf of the smart account (sender)
-  await entryPoint.depositTo(PAYMASTER_ADDRESS, {
-    value: hre.ethers.parseEther("0.5"),
-  });
+  const initCode = "0x";
 
   const Account = await hre.ethers.getContractFactory("Account");
   const userOp = {
@@ -56,7 +48,7 @@ async function main() {
   };
 
   const userOpHash = await entryPoint.getUserOpHash(userOp);
-  userOp.signature = signer0.signMessage(hre.ethers.getBytes(userOpHash));
+  userOp.signature = signer1.signMessage(hre.ethers.getBytes(userOpHash));
 
   const tx = await entryPoint.handleOps([userOp], address0);
   const receipt = await tx.wait();

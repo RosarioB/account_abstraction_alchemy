@@ -18,7 +18,6 @@ async function main() {
 
   console.log("Sender address " + sender);
 
-  const AccountFactory = await hre.ethers.getContractFactory("AccountFactory");
   const [signer0] = await hre.ethers.getSigners();
   const address0 = await signer0.getAddress();
   const initCode = "0x";
@@ -30,21 +29,24 @@ async function main() {
     initCode,
     callData: Account.interface.encodeFunctionData("execute"),
     accountGasLimits: encode(
-      hre.ethers.parseUnits("200000", "wei"),
-      hre.ethers.parseUnits("100000", "wei")
+      hre.ethers.parseUnits("400000", "wei"),
+      hre.ethers.parseUnits("400000", "wei")
     ),
     preVerificationGas: hre.ethers.parseUnits("100000", "wei"),
     gasFees: encode(
-      hre.ethers.parseUnits("100000", "wei"),
-      hre.ethers.parseUnits("100000", "wei")
+      hre.ethers.parseUnits("5", "gwei"),
+      hre.ethers.parseUnits("10", "gwei")
     ),
     paymasterAndData: createPaymasterAndData(
       PAYMASTER_ADDRESS,
-      hre.ethers.parseUnits("100000", "wei"),
-      hre.ethers.parseUnits("100000", "wei")
+      hre.ethers.parseUnits("400000", "wei"),
+      hre.ethers.parseUnits("400000", "wei")
     ),
     signature: "0x",
   };
+
+  const userOpHash = await entryPoint.getUserOpHash(userOp);
+  userOp.signature = signer0.signMessage(hre.ethers.getBytes(userOpHash));
 
   const tx = await entryPoint.handleOps([userOp], address0);
   const receipt = await tx.wait();
