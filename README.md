@@ -1,5 +1,6 @@
 # Execute a User Operation
-The code is taken from the video https://www.youtube.com/watch?v=NM04uxcCOEw&list=PLMj8NvODurfF5xy8CO59TNNeC-RTtCCf8&index=1
+- [Link to the video](https://www.youtube.com/watch?v=NM04uxcCOEw&list=PLMj8NvODurfF5xy8CO59TNNeC-RTtCCf8&index=1)
+- [Link to the documentation](https://docs.alchemy.com/docs/1-execute-a-user-operation) 
 
 In this branch we execute a basic user operation where it is the Smart Account that it is sponsoring the cost of the user operation. 
 
