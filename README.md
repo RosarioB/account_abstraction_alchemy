@@ -1,5 +1,10 @@
 # Build a paymaster
-In this branch we add the paymaster that will pay the user operation. We firstly 
+This code is taken from the video https://www.youtube.com/watch?v=2LGpEobxIBA&list=PLMj8NvODurfF5xy8CO59TNNeC-RTtCCf8&index=2
+
+In this branch we add the paymaster that will pay the user operation. 
+
+## Execution 
+We firstly 
 First start the local Hardhat blockchain with:
 
 `npx hardhat node`
