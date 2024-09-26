@@ -3,7 +3,7 @@ require("dotenv").config();
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
-  defaultNetwork: "arb", //Values: localhost, arb(Arbitrum Sepolia)
+  defaultNetwork: "arb",
   networks: {
     arb: {
       url: process.env.RPC_URL,
@@ -11,7 +11,7 @@ module.exports = {
     },
   },
   solidity: {
-    version: "0.8.23",
+    version: "0.8.19",
     settings: {
       optimizer: {
         enabled: true,
