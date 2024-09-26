@@ -1,4 +1,4 @@
-# Account validation
+# Shipping to testnet
 - [Link to the video](https://www.youtube.com/watch?v=AY4jI0GXKBc&list=PLMj8NvODurfF5xy8CO59TNNeC-RTtCCf8&index=7)
 - [Link to the documentation](https://docs.alchemy.com/docs/4-ship-it-to-the-testnet)
 
